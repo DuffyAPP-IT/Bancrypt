@@ -8,23 +8,21 @@ void pindec(int i1,int i2,int i3,int i4,int i5,int i6,int key);
 
 void eval(int option) {
     if (option == 1){
-        printf("Hello, world!\n");
+        printf("Hello, World! (Try again)\n\n");
         main();
     }
 
     if (option == 2){
-        int in1[6];
+        int in1[5];
         printf("Ready to encode pin (6 integers exactly...):\n");
 
         //record, encode, print
-        for(int i=1; i<=6; i++){
-            printf("Enter Pin Integer ");
-            printf("%d", i);
-            printf(": ");
-            scanf("%d", &in1[i-1]);
+        for(int i=0; i<6; i++){
+            printf("Enter Pin Integer %d: ", i+1);
+            scanf("%d", &in1[i]);
         }
         printf("\nNow encoding...\n");
-        int out1[6];
+        int out1[5];
         int key = 7;
         for(int i=0; i<=6;i++){
             if (i == 0){
@@ -56,11 +54,7 @@ void eval(int option) {
         }
 
         for(int i=0; i<6; i++){
-            printf("Encoded Pin Integer ");
-            printf("%d", i);
-            printf(" - ");
-            printf("%d", out1[i]);
-            printf("\n");
+            printf("Encoded Pin Integer %d\t->\t%d\n", i+1, out1[i]);
         }
 
     }
@@ -76,11 +70,11 @@ void eval(int option) {
             scanf("%d", &in2[i-1]);
         }
         printf("\nNow decoding...\n");
-        int out2[6];
+        int out2[5];
         int key = 7;
         printf("\nPlease Enter Key To Decode: \n");
 //        scanf("%d", &key);
-        for(int i=0; i<=6;i++){
+        for(int i=0; i<6;i++){
             if (i == 0){
                 out2[i] = in2[i];
                 out2[i] = out2[i]-key;
@@ -110,11 +104,7 @@ void eval(int option) {
         }
 
         for(int i=0; i<6; i++){
-            printf("Encoded Pin Integer ");
-            printf("%d", i);
-            printf(" - ");
-            printf("%d", out2[i]);
-            printf("\n");
+            printf("Encoded Pin Integer %d\t->\t%d\n", i+1, out2[i]);
         }
 
     }
@@ -125,14 +115,10 @@ void eval(int option) {
         int key = 7;
         printf("Ready for pin entry:\n");
         for(int i=1; i<=6; i++){
-            printf("Enter Secret Pin ");
-            printf("%d", i);
-            printf(": ");
+            printf("Enter Secret Pin %d: ",i);
             scanf("%d", &pinin[i-1]);
         }
-        printf("\nPlease Enter The Key: ");
-        scanf("%d", &key);
-        printf("\n");
+        printf("\nPlease Enter The Key: %d\n", &key);
         pindec(pinin[0],pinin[1],pinin[2],pinin[3],pinin[4],pinin[5],key);
     }
 }
