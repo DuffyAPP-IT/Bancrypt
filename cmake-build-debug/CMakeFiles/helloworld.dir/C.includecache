@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/Users/jamesduffy/Downloads/Archive/checkr0.c
+/Volumes/Data/GitHub/Bancrypt/checkr.c
+stdio.h
+-
+
+/Volumes/Data/GitHub/Bancrypt/checkr0.c
+stdio.h
+-
+
+/Volumes/Data/GitHub/Bancrypt/decode.c
+stdio.h
+-
+
+/Volumes/Data/GitHub/Bancrypt/eval.c
+stdio.h
+-
+
+/Volumes/Data/GitHub/Bancrypt/main.c
 stdio.h
 -
 
