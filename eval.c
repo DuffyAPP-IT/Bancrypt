@@ -8,7 +8,7 @@ void pindec(int i1,int i2,int i3,int i4,int i5,int i6,int key);
 
 void eval(int option) {
     if (option == 1){
-        printf("Hello, world!\n");
+        printf("Hello, World! (Try Again)\n\n");
         main();
     }
 
