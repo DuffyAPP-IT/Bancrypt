@@ -8,7 +8,7 @@ void pindec(int i1,int i2,int i3,int i4,int i5,int i6,int key);
 
 void eval(int option) {
     if (option == 1){
-        printf("Hello, World! (Try again)\n\n");
+        printf("Hello, world!\n");
         main();
     }
 
@@ -115,10 +115,14 @@ void eval(int option) {
         int key = 7;
         printf("Ready for pin entry:\n");
         for(int i=1; i<=6; i++){
-            printf("Enter Secret Pin %d: ",i);
+            printf("Enter Secret Pin ");
+            printf("%d", i);
+            printf(": ");
             scanf("%d", &pinin[i-1]);
         }
-        printf("\nPlease Enter The Key: %d\n", &key);
+        printf("\nPlease Enter The Key: ");
+        scanf("%d", &key);
+        printf("\n");
         pindec(pinin[0],pinin[1],pinin[2],pinin[3],pinin[4],pinin[5],key);
     }
 }
